@@ -5,19 +5,225 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="theme-color" content="#000000">
-  <script type="text/javascript" src="modules/lodash.full.min.js"></script>
-  <script type="text/javascript" src="modules/test-boilerplate.js"></script>
-  <script type="text/javascript" src="script.js"></script>
+  <script type="text/javascript" src="divisionNames.js"></script>
+  <link rel="stylesheet" href="sample.css">
+  <!-- <script type="text/javascript" src="modules/lodash.full.min.js"></script>
+  <script type="text/javascript" src="modules/test-boilerplate.js"></script> -->
 </head>
 
 <body>
-  <h1>DIG プログラミング基礎へようこそ！</h1>
-  <h2>Mac をお使いの方は、 <font color="blue"> Cmd + Option + J</font><br>
-    Windows/Linux をお使いの方は、 <font color="blue"> Control+Shift+J</font> <br>
-    をクリックして、デベロッパーツールを開いてください。</h2>
-  <h2>下記にユニコーンの画像が表示されていれば成功です！</h2>
-  <img src="https://cdn.dribbble.com/users/1281272/screenshots/4515441/unicorn.gif">
-  <h3>30分悩んで進まなくなったら…helpチャンネルで質問してみましょう！</h3>
+  <div class="block0">
+    <h1>人事変更届のページへようこそ！</h1>
+    <!-- <a href="" class="deadline">〆切表示</a> -->
+    <div class="instruction">①変更対象者、②現在、 ③変更後（<font color="red">赤</font color="red">太枠）の情報を入力してください。</div>
+    <div class="instruction">入力が完了したら、ページ最下部の【メール送信】ボタンを押してください</div>
+    <div class="instruction">作成されたCSVをダウンロードし、Outlookメールに添付のうえ送信ください</div>
+
+    <div>①変更対象者の情報を入力してください</div>
+    <div class="code">
+      <div class="category">従業員コード</div>
+      <input type="text" class="personInfo" id="Jcode" placeholder="半角英数７桁"/>
+    </div>
+
+    <div class="code">
+      <div class="category">氏名</div>
+      <input type="text" class="personInfo" placeholder="テキスト"/>
+    </div>
+
+    <div class="code">
+      <div class="category">発令日</div>
+      <input type="date" class="personInfo"  placeholder="yyyy/mm/dd 例)2023/01/01"/>
+    </div>    
+    <div class="code">
+      <div class="category">変更内容</div>
+      <div class="henkonaiyo">
+        <div>
+          <input type="checkbox" class="personInfo"  id="転出" name="転出"/>
+          <label for="転出">転出</label>
+        </div>
+        <div>
+          <input type="checkbox" class="personInfo"  id="転入" name="転入"/>
+          <label for="転入">転入</label>
+        </div>
+        <div>
+          <input type="checkbox" class="personInfo"  id="兼務追加・廃止" name="兼務追加・廃止"/>
+          <label for="兼務追加・廃止">兼務追加・廃止</label>
+        <div>
+          <input type="checkbox"  class="personInfo"  id="その他（ロケ・職位変更等）" name="その他（ロケ・職位変更等）"/>
+          <label for="その他（ロケ・職位変更等）">その他（ロケ・職位変更等）</label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="block1">
+    <div class="blocka">
+      <div class="frame">-------②現在の情報-------</div>
+      <div>以下、現在（変更元）の情報を入力してください [*検索ボタン:CZ110/CZ200/AB100/ZZ990]</div>
+      <!-- <div>「主務」「兼務」いずれかを選択</div>
+        <div>
+          <input type="checkbox" id="主務" name="主務"/>
+          <label for="主務">主務</label>
+      </div>
+      <div>
+        <input type="checkbox" id="兼務" name="兼務"/>
+        <label for="兼務">兼務</label>
+      </div> -->
+      <!-- </fieldset> -->
+      <div class="code">
+        <div class="category">所属コード</div>
+        <input type="text" id= "currentDivNumber" class="current" placeholder="半角英数5桁"/>
+        <button type="button" id = "serchButton1">検索</button>
+      </div>
+
+      <div class="code">
+        <div class="category">部名称</div>
+        <input type="text" id= "currentDivName" class="current"placeholder="テキスト"/>
+      </div> 
+
+      <div class="code">
+        <div class="category">室課名称</div>
+        <input type="text" id= "currentDeptName" class="current"placeholder="テキスト"/>
+      </div> 
+
+      <div class="code">
+        <div class="category">G係名称</div>
+        <input type="text" id= "currentGrpName" class="current"placeholder="テキスト"/>  
+      </div> 
+      
+      <div class="code">
+        <div class="category">ロケーション名称</div>
+        <input type="text" id= "currentLocName" class="current" placeholder="テキスト"/>  
+      </div> 
+
+      <div class="code">
+        <div class="category">職位</div>
+        <label for="職位"></label>
+        <select name="職位" class="current" id="リストから選択">
+          <option value="">リストから選択</option>
+          <option value="部長">部長</option>
+          <option value="ユニット長">ユニット長</option>
+          <option value="グループ長">グループ長</option>
+          <option value="主査">主査</option>
+          <option value="主幹">主幹</option>
+          <option value="主任">主任</option>
+        </select>
+      </div>
+
+      <!-- <div class="code">
+        <div class="category">>ロケーションコード</div>
+        <input type="text" class="current" placeholder="半角英数3桁"/>
+        <a href="">ロケーションコード</a>
+      </div>  -->
+
+      <div class="code">
+        <div class="category">戻り前提ローテ有無</div>
+        <div>
+          <div>
+            <input type="checkbox" class="current" id="あり" name="あり"/>
+            <label for="あり">あり</label>
+          </div>
+          <div>
+            <input type="checkbox" class="current" id="なし" name="なし"/>
+            <label for="なし">なし</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="blockb">
+      <div class="frame">-------③変更後の情報-------</div>
+      <div>以下、変更後の情報を入力してください [*検索ボタン:CZ110/CZ200/AB100/ZZ990]</div>
+      <!-- <div>
+        <input type="checkbox" id="主務" name="主務"/>
+        <label for="主務">主務</label>
+      </div>
+      <div>
+          <input type="checkbox" id="兼務" name="兼務"/><label for="兼務">兼務　（</label>
+          <input type="checkbox" id="追加" name="追加"/><label for="追加">追加</label>
+          <input type="checkbox" id="廃止" name="廃止　）"/><label for="廃止">廃止　）</label>
+      </div>
+      </fieldset> -->
+    <!-- </fieldset> -->
+
+    <div class="code">
+      <div class="category">所属コード</div>
+      <input type="text" id= "changedDivNumber" class="changed"  placeholder="半角英数5桁"/>
+      <button type="button" id = "serchButton2">検索</button>
+    </div>
+
+    <div class="code">
+      <div class="category">部名称</div>
+      <input type="text" id= "changedDivName" class="changed" placeholder="テキスト"/>
+    </div>
+
+    <div class="code">
+      <div class="category">室課名称</div>
+      <input type="text" id= "changedDeptName"  class="changed" placeholder="テキスト"/>
+    </div>
+
+    <div class="code">
+      <div class="category">G係名称</div>
+      <input type="text" id= "changedGrpName" class="changed" placeholder="テキスト"/>  
+    </div>
+    
+    <div class="code">
+      <div class="category">ロケーション名称 </div>
+      <input type="text" id= "changedLocName" placeholder="テキスト"/> 
+    </div>
+
+    <div class="code">
+      <div class="category">職位</div>
+      <label for="職位"></label>
+      <select name="職位" class="changed" id="リストから選択">
+        <option value="">リストから選択</option>
+        <option value="部長">部長</option>
+        <option value="ユニット長">ユニット長</option>
+        <option value="グループ長">グループ長</option>
+        <option value="主査">主査</option>
+        <option value="主幹">主幹</option>
+        <option value="主任">主任</option>
+      </select>
+    </div>
+
+    <!-- <div class="code">
+      <div class="category">ロケーションコード</div>
+      <input type="text" class="changed" placeholder="半角英数3桁"/>
+      <a href="">ロケーションコード</a>
+    </div> -->
+
+    <div class="code">
+      <div class="category">戻り前提ローテ有無</div>
+      <div> 
+        <div class = "modorizenntei">
+          <input type="checkbox" class="changed" id="あり" name="あり"/><label for="あり">あり　（</label>
+          <label for="異動理由">異動理由<input type="text" id="異動理由" name="異動理由"/></label>
+          <label for="終了予定日">終了予定日<input type="date" placeholder="yyyy/mm/dd 例)2026/01/01"/></label>
+        </div>
+        <div>
+          <input type="checkbox" class="changed" id="なし" name="なし"/>
+          <label for="なし">なし</label>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="block2"> 
+
+  <input type='hidden' id='hidden_data' value=''>
+  <button id="button"
+        type="button" class="blockd">
+    メール送信
+  </button>
+  <div>
+    <img src="C:\Users\1476765\OneDrive - トヨタ自動車株式会社\デスクトップ\DIG\イラスト素材\computer_sagyouin_woman.png" class="img" class="blockc"/>
+  </div>
+</div>
+
+
 </body>
+<script type="text/javascript" src="script.js"></script>
 
 </html>

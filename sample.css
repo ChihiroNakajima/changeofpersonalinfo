@@ -1,0 +1,169 @@
+@charset "utf-8";
+
+h1 {
+    color:rgb(10, 14, 238);
+    font-size: 50px;
+    font-weight:bold;
+    background-color:skyblue;
+    /* width:300px; */
+    text-align: center;
+    /* line-height: 60px; */
+  }
+  .deadline{
+    color:black;
+    font-size: 30px;
+    font-weight:bold;
+    background-color:white;
+    /* width:300px; */
+    text-align: right;
+    /* line-height: 60px; */
+  }
+  .instruction{
+  color:black;
+  font-size: 25px;
+  font-weight:bold;
+  background-color:white;
+  /* width:300px; */
+  text-align: center;
+  /* line-height: 60px; */
+}
+
+.frame{
+  color: white;
+  font-size: 20px;
+  /* font-weight:bold; */
+  background-color:black;
+  /* width:50%; */
+  border:solid 1px black;
+  text-align: center;
+  /* line-height: 60px; */
+}
+
+.category{
+  color: black;
+  font-size: 20px;
+  /* font-weight:bold; */
+  background-color:gray;
+  width:30%;
+  border:solid 1px black;
+  text-align: left;
+  /* line-height: 60px; */
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.personInfo {
+  color: black;
+  font-size: 20px;
+  /* font-weight:bold; */
+  background-color:white;
+  /* width:100px; */
+  text-align: left;
+  border:solid 1px black;
+  /* line-height: 60px; */
+  line-height: 1.2;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+  .current {
+    color:black;
+    font-size: 20px;
+    /* font-weight:bold; */
+    background-color:white;
+    /* width:100px; */
+    text-align: left;
+    border:solid 1px black;
+    /* line-height: 60px; */
+    line-height: 1.2;
+    margin-top: 2px;
+    margin-bottom: 2px;
+  }
+
+  .changed {
+    color:black;
+    font-size: 20px;
+    /* font-weight:bold; */
+    background-color:white;
+    /* width:100px; */
+    text-align: left;
+    border:solid 1px black;
+    /* line-height: 60px; */
+    line-height: 1.2;
+    margin-top: 2px;
+    margin-bottom: 2px;
+  }
+.code{
+  display: flex;  
+}
+
+.blocka{
+  border:solid 1px black;
+  width: 50%;
+}
+
+.blockb{
+  border:solid 4px red;
+  width: 50%;
+}
+
+
+.block1 {
+  display: flex;  
+  }
+
+
+.block2 {
+  /* color:blue; */
+  /* font-size: 20px; */
+  /* font-weight:bold; */
+  /* background-color:skyblue; */
+  /* width:150px; */
+  text-align: center;
+  line-height: 60px;
+  /* border:double 3px black; */
+}
+
+
+#button{
+  color:blue;
+  font-size: 20px;
+  font-weight:bold;
+  background-color:skyblue;
+  width:160px;
+  text-align: center;
+  /* line-height: 60px; */
+  line-height: 1.2;
+  border:double 3px black;
+}
+
+.img {
+  text-align: center;
+  width: 10%;
+  height: 10%;
+}
+
+.modorizenntei {
+  width: 70%;
+}
+/* document.getElementsByClassName("personInfo")[0].innerText.style.color = "red"
+  const currentValue = document.getElementsByClassName("current");
+  for (let value of currentValue){
+      value.style.backgroundColor = "blue"
+  }
+
+  const currentValue = document.getElementsByClassName("current");
+  for (let value of currentValue){
+      value.style.backgroundColor = "blue"
+  } */
+
+/* .personInfo{
+  color:rgb(10, 14, 238);
+  font: size 20px;
+  font-weight:bold;
+  background-color: 
+  width:300;
+  text-align: left;
+  line-height: 60px;
+} */
+
